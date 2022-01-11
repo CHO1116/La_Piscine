@@ -1,57 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb2.c                                   :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: youngjch <youngjch@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/10 20:05:19 by youngjch          #+#    #+#             */
-/*   Updated: 2022/01/11 15:39:36 by youngjch         ###   ########.fr       */
+/*   Created: 2022/01/11 13:31:22 by youngjch          #+#    #+#             */
+/*   Updated: 2022/01/11 16:01:24 by youngjch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-void	ft_print_num(int x, int y);
 void	ft_putchar(char c);
 
-void	ft_print_comb2(void)
+void	ft_putnbr(int nb)
 {
-	int		x;
-	int		y;
-
-	x = 0;
-	while (x <= 99)
+	if (nb == -2147483648)
 	{
-		y = x + 1;
-		while (y <= 99)
-		{
-			ft_print_num(x, y);
-			y++;
-		}
-		x++;
+		ft_putnbr(nb / 10);
+		ft_putchar('8');
 	}
-}
-
-void	ft_print_num(int x, int y)
-{
-	int		a;
-	int		b;
-	int		c;
-	int		d;
-
-	a = 48 + (x / 10);
-	b = 48 + (x % 10);
-	c = 48 + (y / 10);
-	d = 48 + (y % 10);
-	ft_putchar(a);
-	ft_putchar(b);
-	write(1, " ", 1);
-	ft_putchar(c);
-	ft_putchar(d);
-	if (x == 98 && y == 99)
-		return ;
+	else if (nb < 0)
+	{
+		ft_putchar('-');
+		ft_putnbr(-nb);
+	}
 	else
-		write(1, ", ", 2);
+	{
+		if (nb > 9)
+			ft_putnbr(nb / 10);
+		ft_putchar(48 + (nb % 10));
+	}
 }
 
 void	ft_putchar(char c)
@@ -61,6 +40,6 @@ void	ft_putchar(char c)
 
 int	main(void)
 {
-	ft_print_comb2();
+	ft_putnbr(-2147483648);
 	return (0);
 }
