@@ -6,7 +6,7 @@
 /*   By: youngjch <youngjch@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 13:31:22 by youngjch          #+#    #+#             */
-/*   Updated: 2022/01/11 16:01:24 by youngjch         ###   ########.fr       */
+/*   Updated: 2022/01/13 11:29:43 by youngjch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,4 @@ void	ft_putnbr(int nb)
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
-}
-
-int	main(void)
-{
-	ft_putnbr(-2147483648);
-	return (0);
 }

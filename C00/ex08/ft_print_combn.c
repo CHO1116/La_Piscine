@@ -1,25 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
+/*   ft_print_combn.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: youngjch <youngjch@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/10 12:25:42 by youngjch          #+#    #+#             */
-/*   Updated: 2022/01/13 15:38:59 by youngjch         ###   ########.fr       */
+/*   Created: 2022/01/11 16:02:30 by youngjch          #+#    #+#             */
+/*   Updated: 2022/01/13 16:06:22 by youngjch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+void	ft_putchar(char c);
 
-void	ft_print_reverse_alphabet(void)
+void	ft_print_combn(int n)
 {
-	char	c;
+	int		arr[10];
+	int		init;
+	int		index;
 
-	c = 'z';
-	while (c >= 'a')
+	init = 0;
+	index = 0;
+	while (init < n)
 	{
-		write(1, &c, 1);
-		c--;
+		arr[init] = 0;
+		init++;
 	}
+	while (index < n - 1)
+	{
+		if (index != 1)
+		{
+			ft_print_combn(n - 1);
+		}
+		while (arr[n - index - 1] <= 9)
+		{
+			ft_putchar(48 + arr[n - index - 1] % 10);
+			arr[n - index - 1]++;
+			write(1, ", ", 1);
+		}
+		index++;
+	}
+}
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
 }

@@ -6,7 +6,7 @@
 /*   By: youngjch <youngjch@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 20:05:19 by youngjch          #+#    #+#             */
-/*   Updated: 2022/01/11 15:39:36 by youngjch         ###   ########.fr       */
+/*   Updated: 2022/01/13 15:10:39 by youngjch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,10 +57,4 @@ void	ft_print_num(int x, int y)
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
-}
-
-int	main(void)
-{
-	ft_print_comb2();
-	return (0);
 }

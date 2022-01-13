@@ -6,7 +6,7 @@
 /*   By: youngjch <youngjch@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 16:33:17 by youngjch          #+#    #+#             */
-/*   Updated: 2022/01/10 16:41:16 by youngjch         ###   ########.fr       */
+/*   Updated: 2022/01/11 18:47:20 by youngjch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,4 @@ void	ft_is_negative(int n)
 		write(1, "N", 1);
 	else
 		write(1, "P", 1);
-}
-
-int	main(void)
-{
-	ft_is_negative(0);
-	return (0);
 }
