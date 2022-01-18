@@ -6,7 +6,7 @@
 /*   By: youngjch <youngjch@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 10:10:40 by youngjch          #+#    #+#             */
-/*   Updated: 2022/01/18 11:08:44 by youngjch         ###   ########.fr       */
+/*   Updated: 2022/01/18 17:12:57 by youngjch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,20 @@
 
 void	ft_putstr_non_printable(char *str)
 {
-	char	*base;
-	int		index;
+	char			*base;
+	int				index;
+	unsigned int	num;
 
 	base = "0123456789abcdef";
 	index = 0;
 	while (str[index] != '\0')
 	{
-		if (str[index] < 32)
+		num = str[index];
+		if (num < 32 || num > 127)
 		{
 			write(1, "\\", 1);
-			write(1, &base[str[index] / 16], 1);
-			write(1, &base[str[index] % 16], 1);
+			write(1, &base[num / 16], 1);
+			write(1, &base[num % 16], 1);
 		}
 		else
 			write(1, &str[index], 1);
