@@ -6,17 +6,17 @@ int	main(void)
 {
 	int		size;
 	int		i;
-	int		num[6] = {911, 58, 109, 174, 527, 800};
+	int		num[10] = {22, 5, 911, 158, 5000, 109, 174, 204, 527, 800};
 
 	i = 0;
-	size = 6;
+	size = 10;
 	while (i < size)
 	{
 		printf("Before array %d : %d\n", i, num[i]);
 		i++;
 	}
 	printf("\n");
-	ft_sort_int_tab(num, 6);
+	ft_sort_int_tab(num, 10);
 	i = 0;
 	while (i < size)
 	{

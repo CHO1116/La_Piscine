@@ -4,7 +4,7 @@ int		ft_strlen(char *str);
 
 int	main(void)
 {
-	int length;
+	int		length;
 	char	str[1000] = "Hello!!";
 
 	length = ft_strlen(str);
