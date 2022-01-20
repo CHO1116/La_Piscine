@@ -16,7 +16,7 @@ void	ft_putstr_non_printable(char *str)
 {
 	char			*base;
 	int				index;
-	unsigned int	num;
+	unsigned char	num;
 
 	base = "0123456789abcdef";
 	index = 0;
