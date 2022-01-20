@@ -6,30 +6,30 @@
 /*   By: youngjch <youngjch@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 16:45:13 by youngjch          #+#    #+#             */
-/*   Updated: 2022/01/18 17:06:40 by youngjch         ###   ########.fr       */
+/*   Updated: 2022/01/20 12:45:23 by youngjch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_sort_int_tab(int *tab, int size)
 {
-	int	min;
-	int	i;
-	int	j;
+	int		min;
+	int		index1;
+	int		index2;
 
-	i = 0;
-	while (i < size - 1)
+	index1 = 0;
+	while (index1 < size)
 	{
-		j = 0;
-		while (j < size - 1 - i)
+		index2 = 0;
+		while (index2 < size - 1)
 		{
-			if (tab[j] > tab[j + 1])
+			if (tab[index2 + 1] < tab[index2])
 			{
-				min = tab[j];
-				tab[j] = tab[j + 1];
-				tab[j + 1] = min;
+				min = tab[index2 + 1];
+				tab[index2 + 1] = tab[index2];
+				tab[index2] = min;
 			}
-			j++;
+			index2++;
 		}
-		i++;
+		index1++;
 	}
 }
