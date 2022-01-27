@@ -6,7 +6,7 @@
 /*   By: youngjch <youngjch@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 10:10:40 by youngjch          #+#    #+#             */
-/*   Updated: 2022/01/20 12:48:28 by youngjch         ###   ########.fr       */
+/*   Updated: 2022/01/27 09:53:48 by youngjch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,4 @@ void	ft_putstr_non_printable(char *str)
 		index++;
 	}
 	return ;
-}		
+}
