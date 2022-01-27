@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_combn.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: youngjch <youngjch@student.42seoul.>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/01/11 16:02:30 by youngjch          #+#    #+#             */
+/*   Updated: 2022/01/27 09:41:13 by youngjch         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include <unistd.h>
 
 void	ft_putchar(char ch)
@@ -29,8 +40,8 @@ void	ft_nums_up(int *arr, int n, int pre_idx)
 
 int	ft_get_index(int *arr, int n)
 {
-	int i;
-	int max;
+	int	i;
+	int	max;
 
 	i = 0;
 	max = 10 - n;
@@ -48,7 +59,7 @@ int	ft_get_index(int *arr, int n)
 
 void	ft_print_combn(int n)
 {
-	int	arr[n + 1];
+	int	arr[10];
 	int	i;
 	int	pre_idx;
 
